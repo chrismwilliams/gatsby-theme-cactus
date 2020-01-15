@@ -1,0 +1,42 @@
+{
+  "name": "gatsby-theme-cactus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Chris Williams",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrismwilliams/gatsby-theme-cactus.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "blog"
+  ],
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.18.21",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "gatsby": "^2.18.21",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "gatsby-plugin-sass": "^2.1.27",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-remark": "^2.6.48",
+    "node-sass": "^4.13.0"
+  }
+}
