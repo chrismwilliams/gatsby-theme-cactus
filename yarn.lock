@@ -1268,7 +1268,7 @@
   dependencies:
     core-js "^2.5.7"
 
-"@mdx-js/mdx@^1.5.5":
+"@mdx-js/mdx@^1.5.1":
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.5.5.tgz#09dc8932af84e5baf5add2625ad0250a117c3363"
   integrity sha512-Xv1lJ+VWt8giWQrqf4GdIBxl08SfepfIWAnuuIzuR+wA59SaXDvkW6XFIvl8u495OQEB1eugMvq8l2XR8ZGr1A==
@@ -1388,6 +1388,13 @@
   version "0.2.42"
   resolved "https://registry.yarnpkg.com/@theme-ui/preset-tailwind/-/preset-tailwind-0.2.42.tgz#00e009827da2ffea628fa5b89002cd8cb6db805f"
   integrity sha512-giQQ0xoGB2btWvLlg9GQSyRiQ6vGCpVF+uf5OxU5TJt2DGyuYckxvlG3za93o80cxHnVlm5YyO2sLNzXyQSi0w==
+
+"@theme-ui/prism@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/prism/-/prism-0.3.0.tgz#69c2f8bf5f5c5d02f1bde5879a149f6cadab2b7c"
+  integrity sha512-5M3uH5zShttu5k84OfCIWrFKFTrPdck/m/1iU/9i8CMM899mIu7VsVTgaUTKkOCMoreH2u+d7Y76j4Ur2ZMzEw==
+  dependencies:
+    prism-react-renderer "^1.0.2"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -5744,10 +5751,10 @@ gatsby-plugin-react-helmet@^3.1.21:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-sharp@^2.3.13:
-  version "2.3.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.3.13.tgz#664d24f148a59552ebcd2fa92bfdab0b8dc4e9d9"
-  integrity sha512-4R6H7qGRFjyYIv5nqKXKh3yXNg0iK5XZXRi1yDP0IWsytKDo5CKgmX9XWrvoRSnlYj5TWOsv32nfeCbgUPK0Lw==
+gatsby-plugin-sharp@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.4.3.tgz#b5c72a8e5eeeaedd13f49e6056ab6275a93882fc"
+  integrity sha512-d7nxPHbswrpCccUf0HtzWf9dvAqmcVXLQllqgvfeoQ/nOetFwFAqT14aQaVXV+nOcbzGQIMEA/ShTNnrpF8Hag==
   dependencies:
     "@babel/runtime" "^7.7.6"
     async "^2.6.3"
@@ -5761,7 +5768,6 @@ gatsby-plugin-sharp@^2.3.13:
     imagemin-webp "^5.1.0"
     lodash "^4.17.15"
     mini-svg-data-uri "^1.1.3"
-    p-defer "^3.0.0"
     potrace "^2.1.2"
     probe-image-size "^4.1.1"
     progress "^2.0.3"
@@ -5794,6 +5800,20 @@ gatsby-react-router-scroll@^2.1.20:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
+gatsby-remark-copy-linked-files@^2.1.36:
+  version "2.1.36"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.36.tgz#fdc22d99af67f8cfb7dd2c016dd6bc485af0a0fc"
+  integrity sha512-WEvdRLvWHr8ftrHUfq/77N0AbraGN62fkWe4E+p8/SKPCXb7WV7sY67Z/npiBAh6bRMNWsy/UZpKEkOk/oz04A==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+    cheerio "^1.0.0-rc.3"
+    fs-extra "^8.1.0"
+    is-relative-url "^3.0.0"
+    lodash "^4.17.15"
+    path-is-inside "^1.0.2"
+    probe-image-size "^4.1.1"
+    unist-util-visit "^1.4.1"
+
 gatsby-remark-images@^3.1.42:
   version "3.1.42"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.42.tgz#93a6e191c6af7fafad3966616ea66b4bd5280082"
@@ -5810,6 +5830,16 @@ gatsby-remark-images@^3.1.42:
     query-string "^6.9.0"
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
+
+gatsby-remark-smartypants@^2.1.20:
+  version "2.1.20"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-2.1.20.tgz#d081d93d50b0f1b48dc2b4d660ef6c2b72c00f97"
+  integrity sha512-kvCW8GuXLoqmWp+JQeMuK5x4u+6ObrOInup+hVsxdv5J4FGYACXQYGGf+QgeC7vsBh15J+ha0ZIAOBwB/tSGSQ==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+    retext "^5.0.0"
+    retext-smartypants "^3.0.3"
+    unist-util-visit "^1.4.1"
 
 gatsby-source-filesystem@^2.1.46:
   version "2.1.46"
@@ -5855,10 +5885,26 @@ gatsby-telemetry@^1.1.47:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-transformer-sharp@^2.3.12:
-  version "2.3.12"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.3.12.tgz#089650dc75d6f133d53a7403e76f6b37060a287f"
-  integrity sha512-Ot/BHucuuF7DuL58fHqvLbN1THw0f1NSY/SGpdjqOzPDDYMs4JUZbaj9iQFoaXLUD76Ubbcng6WxTeE4zLf2pA==
+gatsby-theme-blog-core@^1.0.63:
+  version "1.0.63"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-blog-core/-/gatsby-theme-blog-core-1.0.63.tgz#033f0933af4a610a13929ea074ec44c7e8c9cbb0"
+  integrity sha512-uEP1zgEUP1XQ52wXRNONOhUqjVYeLPJZaK1DBbV9TmOFID3e4eGsV4RKAckv8ZiGGnm/P8z0wIcf4albzcAhHA==
+  dependencies:
+    "@mdx-js/mdx" "^1.5.1"
+    gatsby-core-utils "^1.0.26"
+    gatsby-plugin-mdx "^1.0.67"
+    gatsby-plugin-sharp "^2.4.3"
+    gatsby-remark-copy-linked-files "^2.1.36"
+    gatsby-remark-images "^3.1.42"
+    gatsby-remark-smartypants "^2.1.20"
+    gatsby-source-filesystem "^2.1.46"
+    gatsby-transformer-sharp "^2.3.13"
+    remark-slug "^5.1.2"
+
+gatsby-transformer-sharp@^2.3.13:
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.3.13.tgz#b2bd2967fee1c2511ad896645acab34954d52bc6"
+  integrity sha512-jof7b1btkABcsN6lP5qd7cBMffPFv09qTKs6ZTgRIRB9jQBiBizJydmyT97eCqqIl0dKIr8/5Bt/eC6jyxMj8A==
   dependencies:
     "@babel/runtime" "^7.7.6"
     bluebird "^3.7.2"
@@ -6107,7 +6153,7 @@ github-from-package@0.0.0:
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
   integrity sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=
 
-github-slugger@^1.2.1:
+github-slugger@^1.0.0, github-slugger@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.2.1.tgz#47e904e70bf2dccd0014748142d31126cfd49508"
   integrity sha512-SsZUjg/P03KPzQBt7OxJPasGw6NRO5uOgiZ5RGXVud5iSIZ0eNZeNp5rTwCxtavrRUa/A77j8mePVc5lEvk0KQ==
@@ -7157,7 +7203,7 @@ is-binary-path@~2.1.0:
   dependencies:
     binary-extensions "^2.0.0"
 
-is-buffer@^1.1.5, is-buffer@~1.1.1:
+is-buffer@^1.1.4, is-buffer@^1.1.5, is-buffer@~1.1.1:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
@@ -8028,7 +8074,7 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
-lodash.merge@^4.4.0:
+lodash.merge@^4.4.0, lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
@@ -8342,7 +8388,7 @@ mdast-util-to-nlcst@^3.2.0:
     unist-util-position "^3.0.0"
     vfile-location "^2.0.0"
 
-mdast-util-to-string@^1.0.5, mdast-util-to-string@^1.0.7:
+mdast-util-to-string@^1.0.0, mdast-util-to-string@^1.0.5, mdast-util-to-string@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.0.7.tgz#62d8e9c6b2113070d8b497c7dc35bf12796f06ee"
   integrity sha512-P+gdtssCoHOX+eJUrrC30Sixqao86ZPlVjR5NEAoy0U79Pfxb1Y0Gntei0+GrnQD4T04X9xA8tcugp90cSmNow==
@@ -9218,11 +9264,6 @@ p-defer@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-defer/-/p-defer-1.0.0.tgz#9f6eb182f6c9aa8cd743004a7d4f96b196b0fb0c"
   integrity sha1-n26xgvbJqozXQwBKfU+WsZaw+ww=
-
-p-defer@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/p-defer/-/p-defer-3.0.0.tgz#d1dceb4ee9b2b604b1d94ffec83760175d4e6f83"
-  integrity sha512-ugZxsxmtTln604yeYd29EGrNhazN2lywetzpKhfmQjW/VJmhpDmWbiX+h0zL8V91R0UXkhb3KtPmyq9PZw3aYw==
 
 p-event@^1.0.0:
   version "1.3.0"
@@ -10169,6 +10210,11 @@ pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
+prism-react-renderer@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-1.0.2.tgz#3bb9a6a42f76fc049b03266298c7068fdd4b7ea9"
+  integrity sha512-0++pJyRfu4v2OxI/Us/5RLui9ESDkTiLkVCtKuPZYdpB8UQWJpnJQhPrWab053XtsKW3oM0sD69uJ6N9exm1Ag==
+
 private@^0.1.6:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -10845,6 +10891,15 @@ remark-retext@^3.1.3:
   dependencies:
     mdast-util-to-nlcst "^3.2.0"
 
+remark-slug@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/remark-slug/-/remark-slug-5.1.2.tgz#715ecdef8df1226786204b1887d31ab16aa24609"
+  integrity sha512-DWX+Kd9iKycqyD+/B+gEFO3jjnt7Yg1O05lygYSNTe5i5PIxxxPjp5qPBDxPIzp5wreF7+1ROCwRgjEcqmzr3A==
+  dependencies:
+    github-slugger "^1.0.0"
+    mdast-util-to-string "^1.0.0"
+    unist-util-visit "^1.0.0"
+
 remark-squeeze-paragraphs@3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/remark-squeeze-paragraphs/-/remark-squeeze-paragraphs-3.0.4.tgz#9fe50c3bf3b572dd88754cd426ada007c0b8dc5f"
@@ -11042,6 +11097,38 @@ retext-english@^3.0.4:
   dependencies:
     parse-english "^4.0.0"
     unherit "^1.0.4"
+
+retext-latin@^2.0.0:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/retext-latin/-/retext-latin-2.0.4.tgz#ef5d34ae7641ae56b0675ea391095e8ee762b251"
+  integrity sha512-fOoSSoQgDZ+l/uS81oxI3alBghDUPja0JEl0TpQxI6MN+dhM6fLFumPJwMZ4PJTyL5FFAgjlsdv8IX+6IRuwMw==
+  dependencies:
+    parse-latin "^4.0.0"
+    unherit "^1.0.4"
+
+retext-smartypants@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/retext-smartypants/-/retext-smartypants-3.0.3.tgz#9c982dcc210ae3bb36f4bc46aae802798fce43f9"
+  integrity sha512-/0fIipYayOvvucn3yjxvWwyT9P6p8gbpqdqUQNs1+L7av2hxatmiA9sk+fygJSDn5OXRyhBzcezvTbEmEabfIQ==
+  dependencies:
+    nlcst-to-string "^2.0.0"
+    unist-util-visit "^1.0.0"
+
+retext-stringify@^2.0.0:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/retext-stringify/-/retext-stringify-2.0.4.tgz#496d6c532f7dc6d15e4b262de0266e828f72efa9"
+  integrity sha512-xOtx5mFJBoT3j7PBtiY2I+mEGERNniofWktI1cKXvjMEJPOuqve0dghLHO1+gz/gScLn4zqspDGv4kk2wS5kSA==
+  dependencies:
+    nlcst-to-string "^2.0.0"
+
+retext@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/retext/-/retext-5.0.0.tgz#5d9018c4a677d6103c142362d76f50eb1d398bf6"
+  integrity sha1-XZAYxKZ31hA8FCNi129Q6x05i/Y=
+  dependencies:
+    retext-latin "^2.0.0"
+    retext-stringify "^2.0.0"
+    unified "^6.0.0"
 
 retry@^0.12.0:
   version "0.12.0"
@@ -12622,6 +12709,18 @@ unified@8.4.2, unified@^8.4.2:
     trough "^1.0.0"
     vfile "^4.0.0"
 
+unified@^6.0.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
+  integrity sha512-1k+KPhlVtqmG99RaTbAv/usu85fcSRu3wY8X+vnsEhIxNP5VbVIDiXnLqyKIG+UMdyTg0ZX9EI6k2AfjJkHPtA==
+  dependencies:
+    bail "^1.0.0"
+    extend "^3.0.0"
+    is-plain-obj "^1.1.0"
+    trough "^1.0.0"
+    vfile "^2.0.0"
+    x-is-string "^0.1.0"
+
 unified@^7.0.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/unified/-/unified-7.1.0.tgz#5032f1c1ee3364bd09da12e27fdd4a7553c7be13"
@@ -13035,6 +13134,16 @@ vfile-message@^1.0.0:
   integrity sha512-1WmsopSGhWt5laNir+633LszXvZ+Z/lxveBf6yhGsqnQIhlhzooZae7zV6YVM1Sdkw68dtAW3ow0pOdPANugvA==
   dependencies:
     unist-util-stringify-position "^1.1.1"
+
+vfile@^2.0.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vfile/-/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
+  integrity sha512-ASt4mBUHcTpMKD/l5Q+WJXNtshlWxOogYyGYYrg4lt/vuRjC1EFQtlAofL5VmtVNIZJzWYFJjzGWZ0Gw8pzW1w==
+  dependencies:
+    is-buffer "^1.1.4"
+    replace-ext "1.0.0"
+    unist-util-stringify-position "^1.0.0"
+    vfile-message "^1.0.0"
 
 vfile@^3.0.0:
   version "3.0.1"

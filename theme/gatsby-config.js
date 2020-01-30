@@ -2,57 +2,23 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
 });
 
-const OptionDefaults = {
-  contentPath: `posts`,
-  imagePath: `${__dirname}/src/images`,
-  assetMaxWidth: 900,
-  assetQuality: 100
-};
-
-module.exports = themeOptions => {
-  const options = Object.assign({}, OptionDefaults, themeOptions);
-
+module.exports = options => {
   return {
     siteMetadata: {
       title: `Gatsby Theme Cactus`,
       description: `Simple blog Gatsby Theme`,
-      author: `Chris Williams`
+      siteUrl: `https://gatsby.org`,
+      author: `Chris Williams`,
+      lang: `en`,
+      social: [{ name: `GitHub`, url: `https://github.com/chrismwilliams` }]
     },
     plugins: [
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-sitemap`,
       `gatsby-plugin-theme-ui`,
-      `gatsby-plugin-sharp`,
-      `gatsby-transformer-sharp`,
       {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `images`,
-          path: options.imagePath
-        }
-      },
-      {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          name: `content`,
-          path: options.contentPath
-        }
-      },
-      {
-        resolve: `gatsby-plugin-mdx`,
-        options: {
-          extensions: [`.mdx`, `.md`],
-          gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: options.assetMaxWidth,
-                quality: options.assetQuality,
-                linksImagesToOriginal: false
-              }
-            }
-          ]
-        }
+        resolve: `gatsby-theme-blog-core`,
+        options
       },
       {
         resolve: `gatsby-plugin-google-analytics`,
@@ -69,10 +35,10 @@ module.exports = themeOptions => {
           background_color: `#1d1f21`,
           theme_color: `#2bbc8a`,
           display: `standalone`,
-          icon: `src/images/icon.png` // This path is relative to the root of the site.
+          icon: `content/assets/logo.png` // This path is relative to the root of the site.
         }
       },
       `gatsby-plugin-offline`
-    ]
+    ].filter(Boolean)
   };
 };
