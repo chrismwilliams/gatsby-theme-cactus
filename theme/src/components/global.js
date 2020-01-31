@@ -17,7 +17,6 @@ export default function Global() {
           borderTop: `2px solid ${theme.colors.text}`
         },
         body: {
-          margin: 0,
           padding: 0,
           height: "100%",
           fontSize: 14
