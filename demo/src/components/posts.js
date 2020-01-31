@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import SEO from "gatsby-theme-cactus/src/components/seo";
 import Layout from "gatsby-theme-cactus/src/components/layout";
 import Underline from "./underline";
+import formateTime from "../utils/format-time";
 
 export default function Posts({ data: { allBlogPost } }) {
   return (
@@ -18,8 +19,11 @@ export default function Posts({ data: { allBlogPost } }) {
         <Styled.ul>
           {allBlogPost.edges.map(({ node }) => {
             return (
-              <li key={node.id} sx={{ mb: 3 }}>
-                <time dateTime={node.date} sx={{ mr: [3], color: `tertiary` }}>
+              <li key={node.id} sx={{ mb: 4 }}>
+                <time
+                  dateTime={formateTime(node.date)}
+                  sx={{ mr: [3], color: `tertiary` }}
+                >
                   {node.date}
                 </time>
                 <Underline themeColor="text" hoverThemeColor="secondary">
@@ -27,7 +31,20 @@ export default function Posts({ data: { allBlogPost } }) {
                     {node.title}
                   </Link>
                 </Underline>
-                <em sx={{ m: 0, display: `block` }}>{node.excerpt}</em>
+                <em
+                  sx={{
+                    m: 0,
+                    display: `block`,
+                    "::before": {
+                      content: `"\\201C"`
+                    },
+                    "::after": {
+                      content: `"\\201D"`
+                    }
+                  }}
+                >
+                  {node.excerpt}
+                </em>
               </li>
             );
           })}

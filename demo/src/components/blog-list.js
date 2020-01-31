@@ -3,6 +3,7 @@ import { jsx, Styled } from "theme-ui";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
 import Underline from "./underline";
+import formateTime from "../utils/format-time";
 
 export default function BlogList() {
   const { allBlogPost } = useStaticQuery(BlogListQuery);
@@ -16,7 +17,10 @@ export default function BlogList() {
         {allBlogPost.edges.map(({ node }) => {
           return (
             <li key={node.id} sx={{ mb: 2 }}>
-              <time dateTime={node.date} sx={{ mr: 3, color: `tertiary` }}>
+              <time
+                dateTime={formateTime(node.date)}
+                sx={{ mr: 3, color: `tertiary` }}
+              >
                 {" "}
                 {node.date}
               </time>
