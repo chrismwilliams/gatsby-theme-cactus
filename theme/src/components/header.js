@@ -51,7 +51,7 @@ export default function Header() {
       </Link>
       <Link
         to="/"
-        sx={{ variant: `links.secondary`, "justify-self": `flex-start` }}
+        sx={{ variant: `links.secondary`, justifySelf: `flex-start` }}
       >
         <h1>Gatsby Theme Cactus</h1>
       </Link>
