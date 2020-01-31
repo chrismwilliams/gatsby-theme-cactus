@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "gatsby develop -o",
     "build": "gatsby build",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@theme-ui/prism": "^0.3.0",
