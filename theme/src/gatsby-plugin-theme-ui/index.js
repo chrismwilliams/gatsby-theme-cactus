@@ -1,5 +1,5 @@
 /* Override this file completely by shadowing it.
-  Or override certain details by merging this exported default with your custom settings
+  Or override certain details by merging this exported default with your custom settings, as shown in the demo
   https://theme-ui.com/packages/gatsby-plugin
  */
 

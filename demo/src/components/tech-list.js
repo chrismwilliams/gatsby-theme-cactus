@@ -57,7 +57,7 @@ export default function Technologies() {
         />
         <TechItem
           href="https://theme-ui.com/packages/prism"
-          linkText="Prism Styling"
+          linkText="Prism"
           desc="Prism code block styling"
         />
       </Styled.ul>
