@@ -6,15 +6,17 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 import SEO from "gatsby-theme-cactus/src/components/seo";
 import Layout from "gatsby-theme-cactus/src/components/layout";
+import BlogHeader from "../components/blog-header";
+import formateTime from "../utils/format-time";
 
 export default function Blog({ data: { post }, location, previous, next }) {
   return (
-    <Layout>
+    <Layout header={<BlogHeader previous={previous} next={next} />}>
       <SEO title={post.title} />
       <div sx={{ variant: `layout.post` }}>
         <h2 sx={{ variant: `title`, m: 0 }}>{post.title}</h2>
         <div className="meta">
-          <time dateTime={post.date}>{post.date}</time>
+          <time dateTime={formateTime(post.date)}>{post.date}</time>
           <span>|</span>
           <div className="tags">
             <FontAwesomeIcon icon={faTag} />
