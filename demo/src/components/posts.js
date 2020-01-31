@@ -2,8 +2,8 @@
 import { jsx, Styled } from "theme-ui";
 import { Link } from "gatsby";
 
-import SEO from "gatsby-theme-cactus/src/components/seo";
-import Layout from "gatsby-theme-cactus/src/components/layout";
+import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
+import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
 import Underline from "./underline";
 import formateTime from "../utils/format-time";
 

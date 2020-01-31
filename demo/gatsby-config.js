@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-theme-cactus",
+      resolve: "@chrismwilliams/gatsby-theme-cactus",
       options: {}
     },
     {

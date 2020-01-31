@@ -1,5 +1,5 @@
 // Example of overriding & merging base (gatsby-theme-cactus) styles with your own
-import baseTheme from "gatsby-theme-cactus/src/gatsby-plugin-theme-ui";
+import baseTheme from "@chrismwilliams/gatsby-theme-cactus/src/gatsby-plugin-theme-ui";
 import dracula from "@theme-ui/prism/presets/dracula.json";
 
 // merge custom values with the blog theme's defaults
