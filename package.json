@@ -1,10 +1,5 @@
 {
   "private": true,
-  "scripts": {
-    "dev": "yarn workspace demo dev",
-    "build": "yarn workspace demo build",
-    "serve": "yarn workspace demo serve"
-  },
   "workspaces": [
     "theme",
     "demo"

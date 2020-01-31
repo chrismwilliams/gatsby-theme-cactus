@@ -1,7 +1,11 @@
 /* 
-  ** Your probably going to want to override a few settings in here, such as the siteMetadata and the manifest settings ** 
-  Any options added to gatsby-theme-cactus will be directly passed to gatsby-theme-blog-core
+** Your probably going to want to override a few settings in here, such as the siteMetadata and the manifest settings ** 
+Any options added to gatsby-theme-cactus will be directly passed to gatsby-theme-blog-core
 */
+
+require(`dotenv`).config({
+  path: `.env`
+});
 
 module.exports = {
   siteMetadata: {
