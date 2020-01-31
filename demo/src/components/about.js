@@ -4,8 +4,8 @@ import Img from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import SEO from "gatsby-theme-cactus/src/components/seo";
-import Layout from "gatsby-theme-cactus/src/components/layout";
+import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
+import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
 
 export default function About({ data }) {
   return (

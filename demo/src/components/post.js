@@ -4,8 +4,8 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 
-import SEO from "gatsby-theme-cactus/src/components/seo";
-import Layout from "gatsby-theme-cactus/src/components/layout";
+import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
+import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
 import BlogHeader from "../components/blog-header";
 import formateTime from "../utils/format-time";
 
