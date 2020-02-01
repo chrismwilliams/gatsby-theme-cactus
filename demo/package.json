@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop -o",
@@ -10,7 +10,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@chrismwilliams/gatsby-theme-cactus": "*",
+    "@chrismwilliams/gatsby-theme-cactus": "^1.0.1",
     "@theme-ui/prism": "^0.3.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.19.10",
