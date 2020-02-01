@@ -15,11 +15,6 @@ export default function Global() {
         },
         html: {
           borderTop: `2px solid ${theme.colors.text}`
-        },
-        body: {
-          padding: 0,
-          height: "100%",
-          fontSize: 14
         }
       })}
     />

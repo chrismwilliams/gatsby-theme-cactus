@@ -7,8 +7,8 @@ import tailwind from "@theme-ui/preset-tailwind";
 import colors from "./colors";
 
 export default {
+  useColorSchemeMediaQuery: true,
   ...tailwind,
-  initialColorMode: `dark`,
   colors,
   fonts: {
     ...tailwind.fonts,
@@ -22,10 +22,10 @@ export default {
     root: {
       ...tailwind.styles.root,
       mx: `auto`,
-      py: 0,
+      maxWidth: `48rem`,
       px: 4,
       height: "100%",
-      maxWidth: `48rem`
+      fontSize: 14
     },
     ul: {
       margin: 0,
@@ -41,7 +41,7 @@ export default {
   layout: {
     pageWrapper: {
       position: `relative`,
-      py: [5],
+      py: 5,
       display: `flex`,
       flexDirection: `column`,
       minHeight: `100%`,
@@ -57,8 +57,8 @@ export default {
       display: `grid`,
       gridTemplateColumns: `50px auto`,
       gridTemplateRows: `repeat(2,1fr)`,
-      gridColumnGap: [3],
-      gridRowGap: [1],
+      gridColumnGap: 3,
+      gridRowGap: 1,
       ":hover": {
         ".logo": {
           svg: {
@@ -86,7 +86,7 @@ export default {
         fontStyle: `normal`,
         span: {
           display: `inline-block`,
-          marginRight: [3],
+          marginRight: 3,
           borderRight: `1px dotted`,
           borderRightColor: `primary`,
           ":last-of-type": {
@@ -94,7 +94,7 @@ export default {
           }
         },
         a: {
-          marginRight: [3],
+          marginRight: 3,
           color: `primary`,
           textDecoration: `none`
         }
@@ -122,8 +122,8 @@ export default {
       position: `absolute`,
       bottom: 0,
       width: `100%`,
-      marginBottom: [3],
-      display: [`flex`],
+      marginBottom: 3,
+      display: `flex`,
       flexDirection: [`column`, `row`],
       justifyContent: [`center`, `space-between`],
       alignItems: `center`,
@@ -138,7 +138,7 @@ export default {
         display: `flex`,
         span: {
           display: `inline-block`,
-          marginRight: [3],
+          marginRight: 3,
           borderRight: `1px solid`,
           borderColor: `tertiary`,
           verticalAlign: `middle`,
@@ -150,7 +150,7 @@ export default {
             }
           },
           a: {
-            marginRight: [3],
+            marginRight: 3,
             color: `tertiary`,
             textDecoration: `underline`,
             ":hover": {
@@ -175,8 +175,8 @@ export default {
   },
   title: {
     color: `primary`,
-    marginTop: [5],
-    marginBottom: [3],
+    marginTop: 5,
+    marginBottom: 3,
     letterSpacing: `0.01em`
   }
 };
