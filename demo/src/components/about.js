@@ -32,8 +32,8 @@ export default function About({ data }) {
       <ul>
         <li>I am fully responsive</li>
         <li>I support Google Analytics</li>
-        <li>I have a configurable navigation menu</li>
         <li>I have Font Awesome icons</li>
+        <li>I change colour modes depending on user system preferences</li>
         <li>I'm truly the most tsundere of plants</li>
       </ul>
       <p>
