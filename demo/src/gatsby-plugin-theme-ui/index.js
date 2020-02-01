@@ -1,12 +1,11 @@
 // Example of overriding & merging base (gatsby-theme-cactus) styles with your own
+import { merge } from "theme-ui";
 import baseTheme from "@chrismwilliams/gatsby-theme-cactus/src/gatsby-plugin-theme-ui";
 import dracula from "@theme-ui/prism/presets/dracula.json";
 
 // merge custom values with the blog theme's defaults
-export default {
-  ...baseTheme,
+export default merge(baseTheme, {
   styles: {
-    ...baseTheme.styles,
     code: {
       ...dracula
     },
@@ -23,7 +22,6 @@ export default {
     }
   },
   layout: {
-    ...baseTheme.layout,
     blogHeader: {
       position: `fixed`,
       top: `2rem`,
@@ -182,4 +180,4 @@ export default {
       }
     }
   }
-};
+});
