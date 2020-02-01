@@ -6,13 +6,13 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
 import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
-import BlogHeader from "../components/blog-header";
+import BlogHeader from "./blog-header";
 import formateTime from "../utils/format-time";
 
 export default function Blog({ data: { post }, location, previous, next }) {
   return (
     <Layout header={<BlogHeader previous={previous} next={next} />}>
-      <SEO title={post.title} />
+      <SEO title={post.title} description={post.excerpt} />
       <div sx={{ variant: `layout.post` }}>
         <h2 sx={{ variant: `title`, m: 0 }}>{post.title}</h2>
         <div className="meta">
