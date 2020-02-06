@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Gatsby Theme Cactus logo" src="./content/assets/logo.png" width="70" />
+  <img alt="Gatsby Theme Cactus logo" src="https://res.cloudinary.com/dqzlshiwt/image/upload/v1581006740/web/gatsby-theme-cactus.png" width="70" />
 </p>
 <h1 align="center">
   Gatsby Theme Cactus Demo
