@@ -6,7 +6,6 @@ module.exports = options => {
       siteUrl: `https://gatsby.org`,
       author: `Chris Williams`,
       lang: `en`,
-      social: [{ name: `GitHub`, url: `https://github.com/chrismwilliams` }],
     },
     plugins: [
       {
