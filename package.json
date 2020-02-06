@@ -3,5 +3,9 @@
   "workspaces": [
     "theme",
     "demo"
-  ]
+  ],
+  "scripts": {
+    "dev": "yarn workspace demo dev",
+    "start": "yarn workspace demo start"
+  }
 }
