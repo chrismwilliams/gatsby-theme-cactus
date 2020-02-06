@@ -4,23 +4,30 @@ Any options added to gatsby-theme-cactus will be directly passed to gatsby-theme
 */
 
 require(`dotenv`).config({
-  path: `.env`
+  path: `.env`,
 });
 
 module.exports = {
   siteMetadata: {
-    lang: `en-GB`
+    siteUrl: `https://gatsby-theme-cactus.netlify.com/`,
+    lang: `en-GB`,
+    social: [
+      {
+        name: `GitHub`,
+        url: `https://github.com/chrismwilliams/gatsby-theme-cactus`,
+      },
+    ],
   },
   plugins: [
     {
       resolve: "@chrismwilliams/gatsby-theme-cactus",
-      options: {}
+      options: {},
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID // create an env file with this key and your analytics id
-      }
+        trackingId: process.env.GOOGLE_ANALYTICS_ID, // create an env file with this key and your analytics id
+      },
     },
     `gatsby-plugin-sitemap`,
     {
@@ -32,9 +39,9 @@ module.exports = {
         background_color: `#1d1f21`,
         theme_color: `#2bbc8a`,
         display: `standalone`,
-        icon: `content/assets/logo.png` // This path is relative to the root of the site.
-      }
+        icon: `content/assets/logo.png`, // This path is relative to the root of the site.
+      },
     },
-    `gatsby-plugin-offline`
-  ]
+    `gatsby-plugin-offline`,
+  ],
 };

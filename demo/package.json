@@ -1,12 +1,14 @@
 {
   "private": true,
   "name": "demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "scripts": {
-    "dev": "gatsby develop -o",
     "build": "gatsby build",
+    "dev": "gatsby develop -o",
+    "start": "gatsby develop",
     "clean": "gatsby clean",
+    "format": "prettier --write src/**/*.{js,jsx}",
     "serve": "gatsby serve"
   },
   "dependencies": {

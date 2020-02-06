@@ -1,21 +1,28 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import { useStaticQuery, graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faTwitter,
   faFacebook,
-  faLinkedin
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Underline from "./underline";
 
 export default function Intro() {
+  const {
+    site: {
+      siteMetadata: { social },
+    },
+  } = useStaticQuery(socialLinkQuery);
+
   return (
     <section>
       <p>
-        Hi, I’m a theme for the static generating framework{" "}
+        Hi, I’m a theme for the React static generating framework,{" "}
         <Underline themeColor="text" hoverThemeColor="secondary">
           <a
             sx={{ variant: `links.underline` }}
@@ -23,18 +30,19 @@ export default function Intro() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Gatsby
+            GatsbyJS
           </a>
         </Underline>
-        . I’m particularly great for a personal web page with a simple blog. In
-        this paragraph, you can provide some information about yourself. Below,
-        you’re most recent or highlighted writings and projects are listed.
+        . This demo is an example of how you can use Gatsby Theme Cactus with
+        GatsbyJS, to create a personal blog. If you want to know more about how
+        I was created, click on one of the social links. Below is a list of blog
+        posts created with mdx, and after that a list of technologies I use.
       </p>
       <p>
         Find me on{" "}
         <a
           sx={{ variant: `links.social` }}
-          href="https://github.com/chrismwilliams/gatsby-theme-cactus"
+          href={social[0].url}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -43,7 +51,7 @@ export default function Intro() {
         ,{" "}
         <a
           sx={{ variant: `links.social` }}
-          href="https://github.com/chrismwilliams/gatsby-theme-cactus"
+          href={social[0].url}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -52,7 +60,7 @@ export default function Intro() {
         ,{" "}
         <a
           sx={{ variant: `links.social` }}
-          href="https://github.com/chrismwilliams/gatsby-theme-cactus"
+          href={social[0].url}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -61,7 +69,7 @@ export default function Intro() {
         ,{" "}
         <a
           sx={{ variant: `links.social` }}
-          href="https://github.com/chrismwilliams/gatsby-theme-cactus"
+          href={social[0].url}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -81,3 +89,16 @@ export default function Intro() {
     </section>
   );
 }
+
+const socialLinkQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        social {
+          name
+          url
+        }
+      }
+    }
+  }
+`;
