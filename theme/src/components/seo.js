@@ -4,13 +4,13 @@ import { graphql, useStaticQuery } from "gatsby";
 
 export default function SEO({ title, description, children }) {
   const {
-    site: { siteMetadata }
+    site: { siteMetadata },
   } = useStaticQuery(SEOQuery);
   const seo = {
     title: title || siteMetadata.title,
     description: description || siteMetadata.description,
     url: siteMetadata.siteUrl,
-    author: siteMetadata.author
+    author: siteMetadata.author,
   };
   return (
     <Helmet

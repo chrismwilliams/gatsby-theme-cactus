@@ -12,8 +12,8 @@ export default function Underline({ themeColor, hoverThemeColor, children }) {
         backgroundRepeat: `repeat-x`,
         ":hover": {
           backgroundImage: theme =>
-            `linear-gradient(transparent, transparent 4px, ${theme.colors[hoverThemeColor]} 4px, ${theme.colors[hoverThemeColor]})`
-        }
+            `linear-gradient(transparent, transparent 4px, ${theme.colors[hoverThemeColor]} 4px, ${theme.colors[hoverThemeColor]})`,
+        },
       }}
     >
       {children}

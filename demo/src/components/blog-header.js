@@ -19,8 +19,8 @@ function PrimaryLink({ to, linkText }) {
             )`,
           backgroundPosition: `bottom`,
           backgroundSize: `100% 6px`,
-          backgroundRepeat: `repeat-x`
-        }
+          backgroundRepeat: `repeat-x`,
+        },
       }}
     >
       {linkText}
@@ -40,7 +40,7 @@ export default function BlogHeader({ previous, next }) {
       <nav
         sx={{
           variant: `layout.nav`,
-          visibility: visible ? `initial` : `hidden`
+          visibility: visible ? `initial` : `hidden`,
         }}
       >
         <div className="page-links">

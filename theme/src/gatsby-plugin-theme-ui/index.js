@@ -12,10 +12,10 @@ export default {
   colors,
   fonts: {
     ...tailwind.fonts,
-    body: `"Menlo", monospace`
+    body: `"Menlo", monospace`,
   },
   lineHeights: {
-    body: `1.725`
+    body: `1.725`,
   },
   styles: {
     ...tailwind.styles,
@@ -25,18 +25,18 @@ export default {
       maxWidth: `48rem`,
       px: 4,
       height: "100%",
-      fontSize: 14
+      fontSize: 14,
     },
     ul: {
       margin: 0,
       padding: 0,
       li: {
-        listStyleType: `none`
-      }
+        listStyleType: `none`,
+      },
     },
     p: {
-      hyphens: `auto`
-    }
+      hyphens: `auto`,
+    },
   },
   layout: {
     pageWrapper: {
@@ -49,7 +49,7 @@ export default {
       textRendering: `geometricPrecision`,
       fontSmooth: `grayscale`,
       MozOsxFontSmoothing: `grayscale`,
-      WebkitFontSmoothing: `antialiased`
+      WebkitFontSmoothing: `antialiased`,
     },
     header: {
       margin: `0 auto 2rem`,
@@ -62,9 +62,9 @@ export default {
       ":hover": {
         ".logo": {
           svg: {
-            filter: `none`
-          }
-        }
+            filter: `none`,
+          },
+        },
       },
       ".logo": {
         gridRow: `span 2`,
@@ -73,8 +73,8 @@ export default {
         svg: {
           width: `100%`,
           height: `100%`,
-          filter: `grayscale(100%)`
-        }
+          filter: `grayscale(100%)`,
+        },
       },
       nav: {
         gridColumn: 2,
@@ -90,14 +90,14 @@ export default {
           borderRight: `1px dotted`,
           borderRightColor: `primary`,
           ":last-of-type": {
-            borderRight: 0
-          }
+            borderRight: 0,
+          },
         },
         a: {
           marginRight: 3,
           color: `primary`,
-          textDecoration: `none`
-        }
+          textDecoration: `none`,
+        },
       },
       h1: {
         margin: 0,
@@ -106,17 +106,17 @@ export default {
         fontWeight: 700,
         fontStyle: `normal`,
         fontSize: `1.5rem`,
-        lineHeight: `2rem`
+        lineHeight: `2rem`,
       },
       li: {
-        display: `inline-block`
-      }
+        display: `inline-block`,
+      },
     },
     main: {
       a: {
         color: `text`,
-        textDecoration: `none`
-      }
+        textDecoration: `none`,
+      },
     },
     footer: {
       position: `absolute`,
@@ -132,7 +132,7 @@ export default {
       textAlign: `center`,
       fontSize: `11px`,
       div: {
-        marginRight: [0, 3]
+        marginRight: [0, 3],
       },
       nav: {
         display: `flex`,
@@ -146,37 +146,37 @@ export default {
             marginRight: 0,
             borderRight: 0,
             a: {
-              marginRight: 0
-            }
+              marginRight: 0,
+            },
           },
           a: {
             marginRight: 3,
             color: `tertiary`,
             textDecoration: `underline`,
             ":hover": {
-              color: `#858585`
-            }
-          }
-        }
-      }
-    }
+              color: `#858585`,
+            },
+          },
+        },
+      },
+    },
   },
   links: {
     secondary: {
       color: `text`,
       textDecoration: `none`,
-      display: `inline-block`
+      display: `inline-block`,
     },
     social: {
       ":hover": {
-        color: `secondary`
-      }
-    }
+        color: `secondary`,
+      },
+    },
   },
   title: {
     color: `primary`,
     marginTop: 5,
     marginBottom: 3,
-    letterSpacing: `0.01em`
-  }
+    letterSpacing: `0.01em`,
+  },
 };

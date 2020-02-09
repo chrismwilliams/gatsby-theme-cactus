@@ -16,8 +16,8 @@ function PrimaryLink({ to, linkText }) {
             )`,
           backgroundPosition: `bottom`,
           backgroundSize: `100% 6px`,
-          backgroundRepeat: `repeat-x`
-        }
+          backgroundRepeat: `repeat-x`,
+        },
       }}
     >
       {linkText}

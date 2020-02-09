@@ -36,11 +36,11 @@ export default function Posts({ data: { allBlogPost } }) {
                     m: 0,
                     display: `block`,
                     "::before": {
-                      content: `"\\201C"`
+                      content: `"\\201C"`,
                     },
                     "::after": {
-                      content: `"\\201D"`
-                    }
+                      content: `"\\201D"`,
+                    },
                   }}
                 >
                   {node.excerpt}

@@ -22,5 +22,8 @@
     "gatsby-plugin-sitemap": "^2.2.26",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }

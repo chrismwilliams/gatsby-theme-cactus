@@ -7,19 +7,19 @@ import dracula from "@theme-ui/prism/presets/dracula.json";
 export default merge(baseTheme, {
   styles: {
     code: {
-      ...dracula
+      ...dracula,
     },
     p: {
       textAlign: `justify`,
       code: {
-        ...dracula
+        ...dracula,
       },
       a: {
         ":hover": {
-          textDecoration: `none`
-        }
-      }
-    }
+          textDecoration: `none`,
+        },
+      },
+    },
   },
   layout: {
     blogHeader: {
@@ -51,14 +51,14 @@ export default merge(baseTheme, {
             borderRight: `1px dotted`,
             borderRightColor: `primary`,
             ":last-of-type": {
-              borderRight: 0
-            }
+              borderRight: 0,
+            },
           },
           a: {
             marginRight: [3],
             color: `primary`,
-            textDecoration: `none`
-          }
+            textDecoration: `none`,
+          },
         },
         ".blog-links": {
           mt: 4,
@@ -68,8 +68,8 @@ export default merge(baseTheme, {
             mx: `0.75rem`,
             color: `accent`,
             ":hover": {
-              color: `secondary`
-            }
+              color: `secondary`,
+            },
           },
           "[data-tooltip]": {
             position: `relative`,
@@ -85,18 +85,18 @@ export default merge(baseTheme, {
               color: `text`,
               whiteSpace: `nowrap`,
               zIndex: 999,
-              transition: `opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1)`
+              transition: `opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1)`,
             },
             ":hover": {
               "::after": {
                 display: `block`,
                 opacity: 1,
                 visibility: `visible`,
-                transform: `translateX(-50%) translateY(0)`
-              }
-            }
-          }
-        }
+                transform: `translateX(-50%) translateY(0)`,
+              },
+            },
+          },
+        },
       },
       ".bg-menu": {
         gridColumn: 2,
@@ -107,9 +107,9 @@ export default merge(baseTheme, {
         color: `accent`,
         border: 0,
         ":hover": {
-          cursor: `pointer`
-        }
-      }
+          cursor: `pointer`,
+        },
+      },
     },
     post: {
       ".meta": {
@@ -118,7 +118,7 @@ export default merge(baseTheme, {
         alignItems: [`flex-start`, `center`],
         span: {
           mx: 2,
-          display: [`none`, `initial`]
+          display: [`none`, `initial`],
         },
         ".tags": {
           display: `flex`,
@@ -128,10 +128,10 @@ export default merge(baseTheme, {
             display: `flex`,
             flexWrap: `wrap`,
             li: {
-              mr: 2
-            }
-          }
-        }
+              mr: 2,
+            },
+          },
+        },
       },
       ".md-body": {
         mt: 4,
@@ -148,14 +148,14 @@ export default merge(baseTheme, {
             color: `primary`,
             content: `"#"`,
             fontWeight: `bold`,
-            fontSize: 3
-          }
+            fontSize: 3,
+          },
         },
         pre: {
           my: 4,
           px: 3,
           py: 2,
-          borderRadius: 3
+          borderRadius: 3,
         },
         blockquote: {
           my: 0,
@@ -171,13 +171,13 @@ export default merge(baseTheme, {
             verticalAlign: `-0.4em`,
             lineHeight: `0.1em`,
             content: `"\\201C"`,
-            fontSize: 3
+            fontSize: 3,
           },
           p: {
-            m: 0
-          }
-        }
-      }
-    }
-  }
+            m: 0,
+          },
+        },
+      },
+    },
+  },
 });

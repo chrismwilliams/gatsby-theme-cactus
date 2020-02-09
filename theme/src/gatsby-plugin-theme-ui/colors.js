@@ -10,13 +10,13 @@ export default {
       text: `#c9cacc`,
       accent: `#eeeeee`,
       background: `#1d1f21`,
-      primary: `#2bbc8a`
+      primary: `#2bbc8a`,
     },
     light: {
       text: `#363533`,
       accent: `#111111`,
       background: `#e2e0de`,
-      primary: `#d44375`
-    }
-  }
+      primary: `#d44375`,
+    },
+  },
 };

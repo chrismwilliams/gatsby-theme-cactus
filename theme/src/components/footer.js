@@ -5,8 +5,8 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 export default function Footer() {
   const {
     site: {
-      siteMetadata: { author }
-    }
+      siteMetadata: { author },
+    },
   } = useStaticQuery(FooterQuery);
   return (
     <footer sx={{ variant: `layout.footer` }}>
