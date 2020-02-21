@@ -1,9 +1,9 @@
 import React from "react";
-import { Global } from "@emotion/core";
+import { Global as EmotionGlobal } from "@emotion/core";
 
 export default function Global() {
   return (
-    <Global
+    <EmotionGlobal
       styles={theme => ({
         "*": {
           boxSizing: `border-box`,

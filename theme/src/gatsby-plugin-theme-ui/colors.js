@@ -7,10 +7,7 @@ export default {
   tertiary: `#666`,
   modes: {
     dark: {
-      text: `#c9cacc`,
-      accent: `#eeeeee`,
-      background: `#1d1f21`,
-      primary: `#2bbc8a`,
+      // uses above defaults
     },
     light: {
       text: `#363533`,
