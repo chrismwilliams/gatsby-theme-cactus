@@ -6,6 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
 import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
+import ToggleMode from "@chrismwilliams/gatsby-theme-cactus/src/components/toggle-mode";
 
 export default function About({ data }) {
   return (
@@ -33,7 +34,10 @@ export default function About({ data }) {
         <li>I am fully responsive</li>
         <li>I support Google Analytics</li>
         <li>I have Font Awesome icons</li>
-        <li>I change colour modes depending on user system preferences</li>
+        <li>
+          I change colour modes depending on user system preferences, <br /> or
+          by using a toggle <ToggleMode />
+        </li>
         <li>I'm truly the most tsundere of plants</li>
       </ul>
       <p>
