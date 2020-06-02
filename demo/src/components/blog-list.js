@@ -37,7 +37,7 @@ export default function BlogList() {
   );
 }
 
-export const BlogListQuery = graphql`
+const BlogListQuery = graphql`
   query {
     allBlogPost(sort: { fields: [date, title], order: DESC }, limit: 50) {
       edges {
