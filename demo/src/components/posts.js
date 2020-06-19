@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
 import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
 import Underline from "./underline";
-import formateTime from "../utils/format-time";
+import formatTime from "../utils/format-time";
 
 export default function Posts({ data: { allBlogPost } }) {
   return (
@@ -21,7 +21,7 @@ export default function Posts({ data: { allBlogPost } }) {
             return (
               <li key={node.id} sx={{ mb: 4 }}>
                 <time
-                  dateTime={formateTime(node.date)}
+                  dateTime={formatTime(node.date)}
                   sx={{ mr: [3], color: `tertiary` }}
                 >
                   {node.date}

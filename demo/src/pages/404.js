@@ -8,7 +8,7 @@ export default function PageNotFound() {
     <Layout>
       <SEO />
       <div>
-        <h2>Woops, the page your looking for could not be found</h2>
+        <h2>Woops, the page you're looking for could not be found</h2>
       </div>
     </Layout>
   );

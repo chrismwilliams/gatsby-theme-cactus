@@ -9,7 +9,7 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://gatsby-theme-cactus.netlify.com/`,
+    siteUrl: `https://gatsby-theme-cactus.netlify.app/`,
     lang: `en-GB`,
     social: [
       {
