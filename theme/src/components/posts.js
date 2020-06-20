@@ -2,12 +2,10 @@
 import { jsx, Styled } from "theme-ui";
 import { Link } from "gatsby";
 
-import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
-import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
-import Underline from "./underline";
-import formatTime from "../utils/format-time";
+import { SEO, Layout, Underline } from "./";
+import formatTime from "../../utils/format-time";
 
-export default function Posts({ data: { allBlogPost } }) {
+export default function Posts({ data: { allMdx } }) {
   return (
     <Layout>
       <SEO
@@ -17,18 +15,21 @@ export default function Posts({ data: { allBlogPost } }) {
       <div className="blog-post">
         <h2 sx={{ mt: 0 }}>Archives</h2>
         <Styled.ul>
-          {allBlogPost.edges.map(({ node }) => {
+          {allMdx.edges.map(({ node }) => {
             return (
               <li key={node.id} sx={{ mb: 4 }}>
                 <time
-                  dateTime={formatTime(node.date)}
+                  dateTime={formatTime(node.frontmatter.date)}
                   sx={{ mr: [3], color: `tertiary` }}
                 >
-                  {node.date}
+                  {node.frontmatter.date}
                 </time>
                 <Underline themeColor="text" hoverThemeColor="secondary">
-                  <Link to={node.slug} sx={{ variant: `links.underline` }}>
-                    {node.title}
+                  <Link
+                    to={node.frontmatter.slug}
+                    sx={{ variant: `links.underline` }}
+                  >
+                    {node.frontmatter.title}
                   </Link>
                 </Underline>
                 <em
@@ -43,7 +44,7 @@ export default function Posts({ data: { allBlogPost } }) {
                     },
                   }}
                 >
-                  {node.excerpt}
+                  {node.frontmatter.excerpt}
                 </em>
               </li>
             );
