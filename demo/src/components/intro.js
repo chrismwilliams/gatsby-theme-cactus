@@ -10,7 +10,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Underline from "./underline";
+import { Underline } from "@chrismwilliams/gatsby-theme-cactus/src/components";
 
 export default function Intro() {
   const {

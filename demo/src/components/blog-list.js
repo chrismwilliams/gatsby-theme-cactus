@@ -2,11 +2,11 @@
 import { jsx, Styled } from "theme-ui";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
-import Underline from "./underline";
-import formateTime from "../utils/format-time";
+import { Underline } from "@chrismwilliams/gatsby-theme-cactus/src/components";
+import formateTime from "@chrismwilliams/gatsby-theme-cactus/utils/format-time";
 
 export default function BlogList() {
-  const { allBlogPost } = useStaticQuery(BlogListQuery);
+  const { allMdx } = useStaticQuery(BlogListQuery);
 
   return (
     <section>
@@ -14,19 +14,22 @@ export default function BlogList() {
         <h2 sx={{ variant: `title` }}>Writings</h2>
       </Link>
       <Styled.ul>
-        {allBlogPost.edges.map(({ node }) => {
+        {allMdx.edges.map(({ node }) => {
           return (
             <li key={node.id} sx={{ mb: 2 }}>
               <time
-                dateTime={formateTime(node.date)}
+                dateTime={formateTime(node.frontmatter.date)}
                 sx={{ mr: 3, color: `tertiary` }}
               >
                 {" "}
-                {node.date}
+                {node.frontmatter.date}
               </time>
               <Underline themeColor="text" hoverThemeColor="secondary">
-                <Link to={`${node.slug}/`} sx={{ variant: `links.underline` }}>
-                  {node.title}
+                <Link
+                  to={`${node.frontmatter.slug}`}
+                  sx={{ variant: `links.underline` }}
+                >
+                  {node.frontmatter.title}
                 </Link>
               </Underline>
             </li>
@@ -39,15 +42,20 @@ export default function BlogList() {
 
 const BlogListQuery = graphql`
   query {
-    allBlogPost(sort: { fields: [date, title], order: DESC }, limit: 50) {
+    allMdx(
+      sort: { fields: [frontmatter___date, frontmatter___title], order: DESC }
+      limit: 50
+    ) {
       edges {
         node {
           id
-          excerpt
-          slug
-          title
-          date(formatString: "DD MMM YYYY")
-          tags
+          frontmatter {
+            excerpt
+            slug
+            title
+            date(formatString: "DD MMM YYYY")
+            tags
+          }
         }
       }
     }

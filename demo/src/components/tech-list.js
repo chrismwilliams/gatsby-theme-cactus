@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui";
 
-import Underline from "./underline";
+import { Underline } from "@chrismwilliams/gatsby-theme-cactus/src/components";
 
 function TechItem({ href, linkText, desc }) {
   return (

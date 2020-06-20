@@ -1,7 +1,9 @@
 import React from "react";
 
-import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
-import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
+import {
+  SEO,
+  Layout,
+} from "@chrismwilliams/gatsby-theme-cactus/src/components";
 
 export default function PageNotFound() {
   return (

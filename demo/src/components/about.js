@@ -4,9 +4,11 @@ import Img from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
-import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
-import ToggleMode from "@chrismwilliams/gatsby-theme-cactus/src/components/toggle-mode";
+import {
+  SEO,
+  Layout,
+  ToggleMode,
+} from "@chrismwilliams/gatsby-theme-cactus/src/components";
 
 export default function About({ data }) {
   return (
