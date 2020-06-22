@@ -36,32 +36,35 @@ npm install --save @chrismwilliams/gatsby-theme-cactus
 
 Then add the theme and any options to `gatsby-config.js`.
 
-This theme is composed with [Gatsby Theme Blog Core](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-theme-blog-core) and passes all options set in `gatsby-config.js`.
+### Theme Options
+
+| Key         | Default Value   | Description                             |
+| ----------- | --------------- | --------------------------------------- |
+| `basePath`  | `/`             | Root url for the theme                  |
+| `postsPath` | `content/posts` | Location of posts                       |
+| `pagesPath` | `content/pages` | Location of additional pages (optional) |
+
+#### Example usage
 
 ```js
 module.exports = {
-  // ...siteMetadata
   plugins: [
     {
       resolve: `@chrismwilliams/gatsby-theme-cactus`,
       options: {
         /*
-          This theme passes all the options to its base theme, gatsby-theme-blog-core
+          Gatsby Theme Cactus options
           - basePath: defaults to '/'
           - contentPath: defaults to 'content/posts'
           - assetPath: default to 'content/assets'
-          - mdx: default to 'true'
         */
       },
     },
-    // ...other plugin's
   ],
 };
 ```
 
 ### Content
-
-You can change either the posts path and/or assets path, defaults shown above. You can also disable mdx completely if you so wish.
 
 _Blog_
 

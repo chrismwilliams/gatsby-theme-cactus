@@ -50,7 +50,13 @@ Then add the theme and any options to `gatsby-config.js`
 
 ### Theme Options
 
-Gatsby Theme Cactus is composed with [Gatsby Theme Blog Core](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-theme-blog-core) and passes the options set in `gatsby-config.js` to it.
+| Key         | Default Value   | Description                             |
+| ----------- | --------------- | --------------------------------------- |
+| `basePath`  | `/`             | Root url for the theme                  |
+| `postsPath` | `content/posts` | Location of posts                       |
+| `pagesPath` | `content/pages` | Location of additional pages (optional) |
+
+#### Example usage
 
 ```js
 module.exports = {
@@ -63,7 +69,6 @@ module.exports = {
           - basePath: defaults to '/'
           - contentPath: defaults to 'content/posts'
           - assetPath: default to 'content/assets'
-          - mdx: default to 'true'
         */
       },
     },

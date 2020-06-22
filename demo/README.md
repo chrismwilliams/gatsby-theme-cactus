@@ -57,7 +57,7 @@ module.exports = {
 
 ### Content
 
-You can change either the posts path and/or assets path, as shown below. You can also disable mdx completely if you so wish. Pass any options to Gatsby Theme Cactus in your `gatsby-config.js` file.
+You can change both/either the posts path and assets path, as detailed in the example `gatsby-config.js` file below.
 
 ```js
 module.exports = {
@@ -71,7 +71,6 @@ module.exports = {
           - basePath: defaults to '/'
           - contentPath: defaults to 'content/posts'
           - assetPath: defaults to 'content/assets'
-          - mdx: defaults to 'true'
         */
       },
     },
@@ -92,7 +91,7 @@ Any images for pages or blogs live in `./content/assets`
 
 _Styles_
 
-Adding your own styles is as easy as following the example shown in folder - `./src/gatsby-plugin-theme-ui`. With the shadowed `index.js` file, your'll find a composition of both theme and demo styles. Note that Gatsby Theme Cactus uses the `prefers-color-scheme` media query to set either the default dark or light mode depending on user preference. To change this, again simply shadow `index.js` with the property `useColorSchemeMediaQuery` and set it to false. To shadow/replace just the colours or colour modes, just add a `colors.js` file in this shadowed folder with the same properties.
+Adding your own styles is as easy as following the example shown in folder - `./src/gatsby-plugin-theme-ui`. With the shadowed `index.js` file, you'll find a composition of both theme and demo styles. Note that Gatsby Theme Cactus uses the `prefers-color-scheme` media query to set either the default dark or light mode depending on user preference. To change this, again simply shadow `index.js` with the property `useColorSchemeMediaQuery` and set it to false. To shadow/replace just the colours or colour modes, just add a `colors.js` file in this shadowed folder with the same properties.
 
 ```js
 // @chrismwilliams/gatsby-theme-cactus/src/gatsby-plugin-theme-ui/colors.js
@@ -125,7 +124,7 @@ This demo uses a Prism code style, edit `./src/gatsby-plugin-theme-ui/components
 
 _Gatsby Theme Cactus_
 
-You can shadow any theme component you wish. Following the example in `./src/@chrismwilliams/gatsby-theme-cactus/components/` you can see the demo has a contrived `layout.js` component that shadows/overwrites the one from the theme. It also shadows `gatsby-theme-blog-core/components/post.js` to create a custom blog page.
+You can shadow any theme component you wish. Following the example in `./src/@chrismwilliams/gatsby-theme-cactus/components/` you can see the demo has a contrived `layout.js` component that shadows/overwrites the one from the theme.
 
 ### Analytics
 
