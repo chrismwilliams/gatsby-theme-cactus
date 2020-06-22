@@ -5,13 +5,15 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
+import { TOC as TableOfContents } from "./";
+
 function PrimaryLink({ to, linkText }) {
   return (
     <Link
       to={to}
       sx={{
         ":hover": {
-          backgroundImage: theme => `linear-gradient(
+          backgroundImage: (theme) => `linear-gradient(
               transparent,
               transparent 5px,
               ${theme.colors.primary} 5px,
@@ -28,11 +30,11 @@ function PrimaryLink({ to, linkText }) {
   );
 }
 
-export default function BlogHeader({ previous, next }) {
+export default function BlogHeader({ previous, next, toc }) {
   const [visible, setVisible] = useState(false);
 
   function handleToggle() {
-    setVisible(prevState => !prevState);
+    setVisible((prevState) => !prevState);
   }
 
   return (
@@ -66,6 +68,7 @@ export default function BlogHeader({ previous, next }) {
             </Link>
           )}
         </div>
+        <TableOfContents toc={toc} />
       </nav>
       <button className="bg-menu" onClick={handleToggle}>
         <FontAwesomeIcon icon={faBars} size="2x" />

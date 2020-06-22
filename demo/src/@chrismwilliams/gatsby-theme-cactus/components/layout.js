@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-import Global from "@chrismwilliams/gatsby-theme-cactus/src/components/global";
-import Footer from "@chrismwilliams/gatsby-theme-cactus/src/components/footer";
-import DefaultHeader from "@chrismwilliams/gatsby-theme-cactus/src/components/header";
+import {
+  Global,
+  Footer,
+  Header as DefaultHeader,
+} from "@chrismwilliams/gatsby-theme-cactus/src/components";
 
 export default function DemoLayout({ header, children }) {
   return (

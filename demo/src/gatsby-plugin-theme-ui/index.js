@@ -39,6 +39,7 @@ export default merge(baseTheme, {
         flexDirection: `column`,
         ".page-links": {
           pt: `0.25rem`,
+          display: `flex`,
           pr: 3,
           lineHeight: `15px`,
           letterSpacing: `0.01em`,
@@ -62,24 +63,27 @@ export default merge(baseTheme, {
         },
         ".blog-links": {
           mt: 4,
-          display: [`none`, `initial`],
+          position: `relative`,
+          display: [`none`, `block`],
           alignSelf: `flex-end`,
           a: {
             mx: `0.75rem`,
+            display: `inline-block`,
             color: `accent`,
             ":hover": {
               color: `secondary`,
             },
           },
           "[data-tooltip]": {
-            position: `relative`,
-            "::after": {
-              opacity: 0,
-              visibility: `hidden`,
-              position: `absolute`,
+            "::before": {
               content: `attr(data-tooltip)`,
-              top: `1.5em`,
-              left: `50%`,
+              position: `absolute`,
+              top: 0,
+              right: 0,
+              opacity: 0,
+              mr: 5,
+              visibility: `hidden`,
+              textAlign: `right`,
               transform: `translateX(-50%) translateY(-2px)`,
               fontStyle: `italic`,
               color: `text`,
@@ -88,11 +92,39 @@ export default merge(baseTheme, {
               transition: `opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1)`,
             },
             ":hover": {
-              "::after": {
+              "::before": {
                 display: `block`,
                 opacity: 1,
                 visibility: `visible`,
                 transform: `translateX(-50%) translateY(0)`,
+              },
+            },
+          },
+        },
+      },
+      ".toc": {
+        mt: 3,
+        maxWidth: `15rem`,
+        maxHeight: `calc(95vh - 7rem)`,
+        display: [`none`, `none`, `none`, `none`, `block`],
+        ul: {
+          m: 0,
+          p: 0,
+          textAlign: `right`,
+          fontSize: `0.8rem`,
+          listStyleType: `none`,
+          li: {
+            mb: 2,
+            "::before": {
+              mr: 1,
+              color: `primary`,
+              content: '"#"',
+            },
+            a: {
+              color: `accent`,
+              textDecoration: `none`,
+              ":hover": {
+                color: `secondary`,
               },
             },
           },

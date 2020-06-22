@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "dev": "yarn workspace demo dev",
-    "start": "yarn workspace demo start"
+    "start": "yarn workspace demo start",
+    "clean": "yarn workspace demo clean"
   }
 }

@@ -2,8 +2,8 @@
 import { jsx, Styled } from "theme-ui";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
-import Underline from "./underline";
-import formateTime from "../utils/format-time";
+import { Underline } from "@chrismwilliams/gatsby-theme-cactus/src/components";
+import formateTime from "@chrismwilliams/gatsby-theme-cactus/utils/format-time";
 
 export default function BlogList() {
   const { allBlogPost } = useStaticQuery(BlogListQuery);
@@ -25,7 +25,7 @@ export default function BlogList() {
                 {node.date}
               </time>
               <Underline themeColor="text" hoverThemeColor="secondary">
-                <Link to={`${node.slug}/`} sx={{ variant: `links.underline` }}>
+                <Link to={`${node.slug}`} sx={{ variant: `links.underline` }}>
                   {node.title}
                 </Link>
               </Underline>

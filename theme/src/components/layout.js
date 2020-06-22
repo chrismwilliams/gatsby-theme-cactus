@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-import Global from "./global";
-import Header from "./header";
-import Footer from "./footer";
+import { Global, Header, Footer } from "./";
 
 export default function Layout({ children }) {
   return (

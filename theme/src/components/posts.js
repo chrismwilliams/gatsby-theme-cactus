@@ -2,10 +2,8 @@
 import { jsx, Styled } from "theme-ui";
 import { Link } from "gatsby";
 
-import SEO from "@chrismwilliams/gatsby-theme-cactus/src/components/seo";
-import Layout from "@chrismwilliams/gatsby-theme-cactus/src/components/layout";
-import Underline from "./underline";
-import formatTime from "../utils/format-time";
+import { SEO, Layout, Underline } from "./";
+import formatTime from "../../utils/format-time";
 
 export default function Posts({ data: { allBlogPost } }) {
   return (
