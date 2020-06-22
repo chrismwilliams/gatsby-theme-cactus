@@ -6,31 +6,25 @@ export default PostPage;
 
 export const postQuery = graphql`
   query PostQuery($id: String!, $previousId: String, $nextId: String) {
-    blogPost: mdx(id: { eq: $id }) {
+    blogPost(id: { eq: $id }) {
       id
       tableOfContents
       body
-      frontmatter {
-        excerpt
-        slug
-        title
-        tags
-        date(formatString: "DD MMMM, YYYY")
-      }
+      excerpt
+      slug
+      title
+      tags
+      date(formatString: "DD MMMM, YYYY")
     }
-    previous: mdx(id: { eq: $previousId }) {
+    previous: blogPost(id: { eq: $previousId }) {
       id
-      frontmatter {
-        slug
-        title
-      }
+      slug
+      title
     }
-    next: mdx(id: { eq: $nextId }) {
+    next: blogPost(id: { eq: $nextId }) {
       id
-      frontmatter {
-        slug
-        title
-      }
+      slug
+      title
     }
   }
 `;

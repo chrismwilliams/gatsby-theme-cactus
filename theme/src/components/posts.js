@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import { SEO, Layout, Underline } from "./";
 import formatTime from "../../utils/format-time";
 
-export default function Posts({ data: { allMdx } }) {
+export default function Posts({ data: { allBlogPost } }) {
   return (
     <Layout>
       <SEO
@@ -15,21 +15,18 @@ export default function Posts({ data: { allMdx } }) {
       <div className="blog-post">
         <h2 sx={{ mt: 0 }}>Archives</h2>
         <Styled.ul>
-          {allMdx.edges.map(({ node }) => {
+          {allBlogPost.edges.map(({ node }) => {
             return (
               <li key={node.id} sx={{ mb: 4 }}>
                 <time
-                  dateTime={formatTime(node.frontmatter.date)}
+                  dateTime={formatTime(node.date)}
                   sx={{ mr: [3], color: `tertiary` }}
                 >
-                  {node.frontmatter.date}
+                  {node.date}
                 </time>
                 <Underline themeColor="text" hoverThemeColor="secondary">
-                  <Link
-                    to={node.frontmatter.slug}
-                    sx={{ variant: `links.underline` }}
-                  >
-                    {node.frontmatter.title}
+                  <Link to={node.slug} sx={{ variant: `links.underline` }}>
+                    {node.title}
                   </Link>
                 </Underline>
                 <em
@@ -44,7 +41,7 @@ export default function Posts({ data: { allMdx } }) {
                     },
                   }}
                 >
-                  {node.frontmatter.excerpt}
+                  {node.excerpt}
                 </em>
               </li>
             );

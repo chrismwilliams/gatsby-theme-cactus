@@ -21,21 +21,16 @@ export default function Blog({ data: { blogPost, previous, next } }) {
         />
       }
     >
-      <SEO
-        title={blogPost.frontmatter.title}
-        description={blogPost.frontmatter.excerpt}
-      />
+      <SEO title={blogPost.title} description={blogPost.excerpt} />
       <div sx={{ variant: `layout.post` }}>
-        <h2 sx={{ variant: `title`, m: 0 }}>{blogPost.frontmatter.title}</h2>
+        <h2 sx={{ variant: `title`, m: 0 }}>{blogPost.title}</h2>
         <div className="meta">
-          <time dateTime={formatTime(blogPost.frontmatter.date)}>
-            {blogPost.frontmatter.date}
-          </time>
+          <time dateTime={formatTime(blogPost.date)}>{blogPost.date}</time>
           <span>|</span>
           <div className="tags">
             <FontAwesomeIcon icon={faTag} />
             <Styled.ul>
-              {blogPost.frontmatter.tags.map((tag) => (
+              {blogPost.tags.map((tag) => (
                 <li key={tag}>#{tag}</li>
               ))}
             </Styled.ul>

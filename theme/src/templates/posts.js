@@ -6,19 +6,14 @@ export default PostsPage;
 
 export const query = graphql`
   query PostsQuery {
-    allMdx(
-      sort: { fields: [frontmatter___date, frontmatter___title], order: DESC }
-      limit: 1000
-    ) {
+    allBlogPost(sort: { fields: [date, title], order: DESC }, limit: 1000) {
       edges {
         node {
           id
-          frontmatter {
-            excerpt
-            slug
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
+          excerpt
+          slug
+          title
+          date(formatString: "DD MMMM, YYYY")
         }
       }
     }

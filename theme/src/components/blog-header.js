@@ -58,12 +58,12 @@ export default function BlogHeader({ previous, next, toc }) {
         </div>
         <div className="blog-links">
           {previous && (
-            <Link data-tooltip="Previous post" to={previous.frontmatter.slug}>
+            <Link data-tooltip="Previous post" to={previous.slug}>
               <FontAwesomeIcon icon={faChevronLeft} />
             </Link>
           )}
           {next && (
-            <Link data-tooltip="Next post" to={next.frontmatter.slug}>
+            <Link data-tooltip="Next post" to={next.slug}>
               <FontAwesomeIcon icon={faChevronLeft} rotation={180} />
             </Link>
           )}
