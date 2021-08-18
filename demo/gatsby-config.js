@@ -23,12 +23,13 @@ module.exports = {
       resolve: "@chrismwilliams/gatsby-theme-cactus",
       options: {},
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID, // create an env file with this key and your analytics id
-      },
-    },
+    //TODO: reinstall gatsby-plugin-google-analytics and uncomment plugin setting because dont have a valid trackingId
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: process.env.GOOGLE_ANALYTICS_ID, // create an env file with this key and your analytics id
+    //   },
+    // },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,

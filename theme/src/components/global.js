@@ -1,5 +1,5 @@
 import React from "react";
-import { Global as EmotionGlobal } from "@emotion/core";
+import { Global as EmotionGlobal } from "@emotion/react";
 
 export default function Global() {
   return (
