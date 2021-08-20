@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import { Link } from "gatsby";
 
 import { SEO, Layout, Underline } from "./";
@@ -14,7 +14,7 @@ export default function Posts({ data: { allBlogPost } }) {
       />
       <div className="blog-post">
         <h2 sx={{ mt: 0 }}>Archives</h2>
-        <Styled.ul>
+        <Themed.ul>
           {allBlogPost.edges.map(({ node }) => {
             return (
               <li key={node.id} sx={{ mb: 4 }}>
@@ -46,7 +46,7 @@ export default function Posts({ data: { allBlogPost } }) {
               </li>
             );
           })}
-        </Styled.ul>
+        </Themed.ul>
       </div>
     </Layout>
   );

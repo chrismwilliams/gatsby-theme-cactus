@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,11 +29,11 @@ export default function Blog({ data: { blogPost, previous, next } }) {
           <span>|</span>
           <div className="tags">
             <FontAwesomeIcon icon={faTag} />
-            <Styled.ul>
+            <Themed.ul>
               {blogPost.tags.map((tag) => (
                 <li key={tag}>#{tag}</li>
               ))}
-            </Styled.ul>
+            </Themed.ul>
           </div>
         </div>
         <MDXProvider components={shortcodes}>

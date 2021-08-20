@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
 import { Underline } from "@chrismwilliams/gatsby-theme-cactus/src/components";
@@ -13,7 +13,7 @@ export default function BlogList() {
       <Link to="/archives/" sx={{ variant: `links.secondary` }}>
         <h2 sx={{ variant: `title` }}>Writings</h2>
       </Link>
-      <Styled.ul>
+      <Themed.ul>
         {allBlogPost.edges.map(({ node }) => {
           return (
             <li key={node.id} sx={{ mb: 2 }}>
@@ -32,7 +32,7 @@ export default function BlogList() {
             </li>
           );
         })}
-      </Styled.ul>
+      </Themed.ul>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 
 import { Underline } from "@chrismwilliams/gatsby-theme-cactus/src/components";
 
@@ -34,7 +34,7 @@ export default function Technologies() {
           <h2 sx={{ variant: `title` }}>Technologies</h2>
         </a>
       </span>
-      <Styled.ul>
+      <Themed.ul>
         <TechItem
           href="https://www.gatsby.org"
           linkText="Gatsby"
@@ -60,7 +60,7 @@ export default function Technologies() {
           linkText="Prism"
           desc="Prism code block styling"
         />
-      </Styled.ul>
+      </Themed.ul>
     </section>
   );
 }
