@@ -25,6 +25,9 @@ export default function Global() {
           paddingRight: "2rem",
           height: "100%",
           fontSize: "14px",
+        },
+        pre: {
+          overflow: 'auto'
         }
       })}
     />
