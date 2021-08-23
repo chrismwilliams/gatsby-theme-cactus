@@ -19,14 +19,6 @@ export default {
   },
   styles: {
     ...tailwind.styles,
-    root: {
-      ...tailwind.styles.root,
-      mx: `auto`,
-      maxWidth: `48rem`,
-      px: 4,
-      height: "100%",
-      fontSize: 14,
-    },
     ul: {
       margin: 0,
       padding: 0,
