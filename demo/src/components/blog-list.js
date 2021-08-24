@@ -3,7 +3,7 @@ import { jsx, Themed } from "theme-ui";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
 import { Underline } from "@chrismwilliams/gatsby-theme-cactus/src/components";
-import formateTime from "@chrismwilliams/gatsby-theme-cactus/utils/format-time";
+import formatTime from "@chrismwilliams/gatsby-theme-cactus/utils/format-time";
 
 export default function BlogList() {
   const { allBlogPost } = useStaticQuery(BlogListQuery);
@@ -18,7 +18,7 @@ export default function BlogList() {
           return (
             <li key={node.id} sx={{ mb: 2 }}>
               <time
-                dateTime={formateTime(node.date)}
+                dateTime={formatTime(node.date)}
                 sx={{ mr: 3, color: `tertiary` }}
               >
                 {" "}

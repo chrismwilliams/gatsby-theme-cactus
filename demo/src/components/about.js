@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import Img from "gatsby-image";
+import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -10,7 +10,7 @@ import {
   ToggleMode,
 } from "@chrismwilliams/gatsby-theme-cactus/src/components";
 
-export default function About({ data }) {
+export default function About() {
   return (
     <Layout>
       <SEO title="About" description="Here's a little bit about myself" />
@@ -26,10 +26,11 @@ export default function About({ data }) {
         </a>
         . I’m particularly great for a personal web page with a simple blog.
       </p>
-      <Img
-        fluid={data.aboutImg.childImageSharp.fluid}
+      <StaticImage
+        src="../../content/assets/cactus.png"
         alt="Picture of a cactus"
         sx={{ mx: `auto`, my: [4], maxWidth: 200 }}
+        layout="fullWidth"
       />
       <p>These are my best features</p>
       <ul>
