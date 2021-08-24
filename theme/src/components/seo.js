@@ -30,7 +30,7 @@ export default function SEO({ title, description, children }) {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:creator" content={seo.author} />
-      <meta name="gatsby-theme" content="gatsby-theme-cactus" />
+      <meta name="gatsby-theme" content="@chrismwilliams/gatsby-theme-cactus" />
       {children}
     </Helmet>
   );

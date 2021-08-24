@@ -7,7 +7,7 @@ module.exports = (themeOptions) => {
     siteMetadata: {
       title: `Gatsby Theme Cactus`,
       description: `Gatsby Theme Cactus`,
-      siteUrl: `https://gatsby.org`,
+      siteUrl: `https://gatsby-theme-cactus.netlify.app/`,
       author: `Chris Williams`,
       lang: `en`,
     },
