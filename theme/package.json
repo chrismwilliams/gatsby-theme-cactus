@@ -1,6 +1,6 @@
 {
   "name": "@chrismwilliams/gatsby-theme-cactus",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "index.js",
   "license": "MIT",
   "author": "Chris Williams",
@@ -11,6 +11,7 @@
   "keywords": [
     "gatsby",
     "gatsby-theme",
+    "gatsby-theme-cactus",
     "gatsby-plugin",
     "blog"
   ],
@@ -29,8 +30,7 @@
     "gatsby": "^3.11.1",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "yarn-upgrade-all": "^0.5.4"
+    "react-dom": "^17.0.2"
   },
   "dependencies": {
     "@emotion/react": "^11.4.1",
@@ -42,7 +42,7 @@
     "@mdx-js/react": "^1.6.22",
     "@theme-ui/preset-tailwind": "^0.10.1",
     "@theme-ui/prism": "^0.10.0",
-    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^1.12.0",
     "gatsby-plugin-mdx": "^2.11.0",
     "gatsby-plugin-react-helmet": "^4.11.0",
     "gatsby-plugin-sharp": "^3.11.0",

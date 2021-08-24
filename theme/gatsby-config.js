@@ -53,8 +53,9 @@ module.exports = (themeOptions) => {
           name: options.assetPath,
         },
       },
-      `gatsby-transformer-sharp`,
+      `gatsby-plugin-image`,
       `gatsby-plugin-sharp`,
+      `gatsby-transformer-sharp`,
     ],
   };
 };
