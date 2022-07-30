@@ -55,6 +55,6 @@
     "gatsby-source-filesystem": "^3.11.0",
     "gatsby-transformer-sharp": "^3.11.0",
     "react-helmet": "^6.1.0",
-    "theme-ui": "^0.10.0"
+    "theme-ui": "^0.14.7"
   }
 }
